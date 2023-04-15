@@ -4,41 +4,46 @@ String studName;
 int studId;
 String studCourse;
 
+
+boolean result=true;
+
 public boolean equals(Object obj){
   if (obj==null){
   result=false;}
   else
   {
   OnlineClass oc1=(OnlineClass)obj;
-  if(this.studId==oc1.getStudId() && this.studName==oc1.getStudname())
+  if(this.studId==oc1.getStudId() && this.studName==oc1.getStudName())
   result=true;
-  }}
+  }
   return result;
   }
   
-  pubilc int hashcode(){
+  public int hashCode(){
     int hash =17;
-    hash=hash+hash*studId
-    hash=hash+hash*studName.hashcode();
-    return hash
+    hash=hash+hash*studId;
+    hash=hash+hash*studName.hashCode();
+    return hash;
     }
     
   public int getStudId() {
-	return employeeNumber;
+	return studId;
 	}
-	public void settudId(final int studId) {
+  
+	public void setStudId(final int studId) {
 	this.studId = studId;
 	}
 	public String getStudName() {
 	return studName;
+	}
   
-  public void setstudName(String studName) {
+  public void setStudName(String studName) {
 	this.studName = studName;
 	}
-	public String getstudCourse() {
+	public String getStudCourse() {
 	return studCourse;
 		}
-		public void setstudCourse(String studCourse) {
+		public void setStudCourse(String studCourse) {
 		this.studCourse = studCourse;
 		}
  
